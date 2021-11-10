@@ -1,0 +1,115 @@
+
+@media(max-width:500px){
+
+/* ------------------
+  全体構造
+------------------ */
+
+/* 幅調整(横スクロールバーを消す) */
+    .content {
+        width: auto;
+      }
+
+/* ------------------
+  ヘッダー
+------------------ */
+    header .inner {
+        width: auto;
+    }
+    /* ナビゲーションを消す */
+      header nav.pc-nav{
+          display: none; 
+      }
+      /* flexを取り除く*/
+      .content {
+        display: block;
+      }
+
+
+/* ------------------
+  メイン
+------------------ */
+    main {
+    width: auto;
+    margin-bottom: 60px;
+  }
+  main .card {
+    display: block;
+    text-align: center;
+  }
+    main .card img {
+      margin-bottom: 20px;
+      margin-right: 0;
+  }
+    main .card .desc {
+    width: auto;
+  }
+  .others main{
+    margin: 0 10px;
+  }
+
+/* ------------------
+  サイド
+------------------ */
+      /* サイドを中央に */
+      aside {
+        margin: 20px auto 60px auto;
+    }
+
+/* ------------------
+  フッター
+------------------ */
+    /* PC版では display:none で改行を消し、スマホでは次のようにインライン要素にして改行させる */
+    footer small br{
+        display: inline;
+      }
+
+/* ------------------
+  トップページ
+------------------ */
+
+      #home main h2{
+          margin-left: 10px;
+          margin-right: 10px;
+      }
+      #home main p {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+  /* スマホ表示時 */
+    /* ハンバーガーメニュー */
+    .hamburger-button path {
+      fill:red;
+    }
+
+    .hamburger-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 60px;
+      right: 30px;
+    }
+    /* メニューボタン */
+    .hamburger-button {
+      background-color: transparent;
+    }
+    /* アイコン */
+    .hamburger-button svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* ナビゲーション */
+    .hamburger-nav {
+      height: 100%;
+    }
+    .hamburger-nav li{
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .hamburger-nav a{
+      text-decoration: none;
+    }
+}
